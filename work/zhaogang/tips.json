@@ -1,0 +1,35 @@
+{
+	"items": [{
+		"title": "SAAS平台",
+		"env": {
+			"mit": "http://zg.zhaogangmit.com/basicplatform.scm.platform.ui/index",
+			"test": "https://zg.zhaogangtest.com/basicplatform.scm.platform.ui/index",
+			"uat": "https://zg.zhaoganguat.com/basicplatform.scm.platform.ui/index",
+			"prod": {
+				"ZGZY": "https://zgzy.zhaogang.com/basicplatform.scm.platform.ui/index", 
+				"XSSY": "https://xssy.zhaogang.com/basicplatform.scm.platform.ui/index"
+			}
+		}
+	}, {
+		"title": "Impala/Hue",
+		"env": {
+			"test": "http://cdhuat97.zhoagangren.com:8889",
+			"uat": "http://newcdh140.zhaogangren.com:8889",
+			"prod": "http://newcdh207.zhaogang.com:8889"
+		}
+	}, {
+		"title": "XXL Job",
+		"env": {
+			"test": "http://job.ui.fin.zhaogangrentest.com/xxl-job-admin/",
+			"uat": "http://job.ui.fin.zhaogangrenuat.com/xxl-job-admin/",
+			"prod": "http://job.ui.fin.zhaogangren.com/xxl-job-admin/"
+		}
+	}],
+	"local": [{
+		"description": "Jira - 填写工时",
+		"content": "{\"url\": \"http://jira.izhaogang.com/secure/deskAction!mainpage.jspa?tabId=7\"}"
+	}, {
+		"description": "Jira - 个人工作台",
+		"content": "{\"url\": \"http://jira.izhaogang.com/secure/deskAction!mainpage.jspa\"}"
+	}]
+}
