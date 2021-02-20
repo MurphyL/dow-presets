@@ -1,6 +1,5 @@
-# README
 
-## 配置中心JVM参数
+## 配置中心通用JVM参数
 
 ```txt
 -Dconfig.env=20 

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  front:
+    container_name: dow-presets-web
+    build: ./dir
+    ports:
+      - "7000:3000"
+    volumes:
+      - "./docs:/usr/murph"
+    command: "npm run serve"

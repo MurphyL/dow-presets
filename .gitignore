@@ -105,3 +105,5 @@ dist
 
 # murph
 .workspace
+.serve/.next
+.serve/node_modules

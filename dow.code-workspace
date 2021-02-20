@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "Computer",
+			"path": "./murph"
+		},
+		{
+			"name": "Workspace",
+			"path": "./work/damao"
+		}
+	],
+	"settings": {
+	},
+	"launch": {
+		"configurations": [],
+		"compounds": []
+	}
+}
