@@ -1,12 +1,12 @@
 
-* [项目](projects/)
+* 项目
+
   * [bi.application.mobile.ui](projects/bi.application.mobile.ui/)
   * [inventory.scm.management.api](projects/inventory.scm.management.api/)
-
+  * [项目配置通用参数](projects/)
 * 租户
 
   * [津西国贸](tenants/jxgm/)
-
 * 其他
 
   * [数据库信息](support/database.md)
