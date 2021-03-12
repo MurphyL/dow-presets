@@ -1,15 +1,16 @@
-WORK_DIR=$(CURDIR)
-
 OFFICE?=damao
 
 SERVE_PORT?=5000
 
+IMAGE_PATH=/usr/murph
+
+DOCSIFY_FILES=$(foreach file, $(wildcard $(CURDIR)/docsify/*), -v $(file):$(IMAGE_PATH)/docs/$(notdir $(file)))
+
+ROUTERS=$(foreach name, work murph, -v $(CURDIR)/$(name):$(IMAGE_PATH)/docs/$(name))
+
 start:
-	docker run -i --name dow-$(OFFICE) -e OFFICE=$(OFFICE) -p $(SERVE_PORT):5000 -v $(WORK_DIR)/work/$(OFFICE):/usr/murph/$(OFFICE) murphyl/docsify
+	docker run -i --name dow-$(OFFICE) -p $(SERVE_PORT):5000 $(DOCSIFY_FILES) $(ROUTERS) murphyl/docsify
 
-docs:
-	docker run --rm -it -v $(WORK_DIR):/usr/murph alpine sh -x /usr/murph/build.sh
-
-build:
-	docker run --rm -it -v $(WORK_DIR)/serve:/usr/murph murphyl/nodejs npm run build
-
+restart:
+	@docker restart dow-$(OFFICE)
+	@echo restart successed!

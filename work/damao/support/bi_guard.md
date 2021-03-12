@@ -1,15 +1,4 @@
-## BI 值班
-
-### 跳板机
-
-- [找钢统一协作平台 (zhaogangren.com)](http://paas.zhaogangren.com/#/jumpserver/jumpserver)
-- [胖猫分析 (zhaogang.com)](http://bi.zhaogang.com/index.action)
-
-#### ORACLE 数据库
-
-> ETLAUTO@10.80.12.90/ODS
-
-### 晚上11点任务
+## 晚上11点任务 :id=at-23pm
 
 ```sql
 SELECT etl_job, last_starttime, last_endtime, last_jobstatus 
@@ -17,7 +6,7 @@ FROM etl_job
 WHERE etl_job LIKE 'MNT_ALTER_ODS_TABLE';
 ```
 
-### 凌晨3点任务
+## 凌晨3点任务 :id=at-03am
 
 ```sql
 SELECT etl_job, last_starttime, last_endtime, last_jobstatus 
@@ -36,7 +25,7 @@ FROM etl_job
 WHERE etl_job LIKE '%BH_%';
 ```
 
-### 凌晨5点任务
+## 凌晨5点任务 :id=at-05am
 
 ```sql
 SELECT etl_job, last_starttime, last_endtime, last_jobstatus 
@@ -49,3 +38,6 @@ WHERE etl_job IN (
     'HTO_DWD_BH_IOU_CUSTOMER_TWO'
 );
 ```
+## 其他信息 :id=others
+
+[bi_notes](bi_basic.md ':include')

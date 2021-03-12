@@ -1,0 +1,11 @@
+<deps>
+	<item group="helpers/busybox" name="git-for-windows">
+		<url>https://npm.taobao.org/mirrors/git-for-windows/v2.30.0.windows.1/MinGit-2.30.0-busybox-64-bit.zip</url>
+		<script>
+			Write-Output "拷贝 MinGit-2.30.0-busybox-64-bit 下的 busybox.exe……"
+			Copy-Item "${workspace}\deps\${group}\${name}\mingw64\bin\busybox.exe" "${workspace}\deps\${group}\busybox.exe" -Force
+			Write-Output "删除 MinGit-2.30.0-busybox-64-bit 的临时文件……"
+			Remove-Item -Path "${workspace}\deps\${group}\${name}" -Recurse -Force
+		</script>
+	</item>
+</deps>
